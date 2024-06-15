@@ -1,0 +1,324 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "B Nazanin";
+}
+@font-face {
+  font-family: "Shabnam";
+  src: url(../fonts/Shabnam.woff) format("woff");
+  font-weight: 300;
+}
+.container {
+  padding: 0 20px;
+  max-width: 800px;
+  min-width: 300px;
+  margin: 32px auto;
+  box-shadow: 0px 1px 1px 0px #2b0000;
+}
+.section_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section_top-title {
+  font-size: medium;
+}
+.section_top-icon {
+  width: 16px;
+  height: 16px;
+}
+.section_link {
+  text-decoration: none;
+  color: #4fc3f7;
+}
+/* .section_link::before{
+    display: block;
+    position:absolute;
+    top: 12px;
+    margin: auto 0;
+    content: "";
+    height: 3px ;
+    width: 100%;
+    background: #111111;
+} */
+.section_bottomn {
+  margin-bottom: 50px;
+  margin-top: 22px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 16px;
+}
+.section_bottomn_items {
+  position: relative;
+  width: 170px;
+  box-shadow: 2px 2px 8px 1px #212121;
+  padding: 15px 10px;
+  -webkit-transition: all 100ms ease-in 10ms;
+  -moz-transition: all 100ms ease-in 10ms;
+  -ms-transition: all 100ms ease-in 10ms;
+  -o-transition: all 100ms ease-in 10ms;
+  transition: all 100ms ease-in 10ms;
+}
+.section_bottomn_items:hover {
+  box-shadow: 4px 4px 8px 2px #cd1919;
+  -webkit-transition: all 300ms ease-in 40ms;
+  -moz-transition: all 300ms ease-in 40ms;
+  -ms-transition: all 300ms ease-in 40ms;
+  -o-transition: all 300ms ease-in 40ms;
+  transition: all 300ms ease-in 40ms;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+/* .section_bottomn_items:hover .sale_offer {
+    -webkit-transform: scale(1.1) rotate(-45deg);
+    -moz-transform: scale(1.1) rotate(-45deg);
+    -ms-transform: scale(1.1) rotate(-45deg);
+    -o-transform: scale(1.1) rotate(-45deg);
+    transform: scale(1.1) rotate(-45deg);
+    -webkit-transition: all 250ms ease-in-out 20ms;
+    -moz-transition: all 250ms ease-in-out 20ms;
+    -ms-transition: all 250ms ease-in-out 20ms;
+    -o-transition: all 250ms ease-in-out 20ms;
+    transition: all 250ms ease-in-out 20ms;
+} */
+
+.item_image {
+  cursor: pointer;
+  object-fit: contain;
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+.item_text {
+  cursor: pointer;
+  line-height: 1.6;
+  font-size: 17px;
+  color: #212121;
+  text-align: justify;
+  font-weight: normal;
+  margin-top: 14px;
+}
+.offer_percent {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  align-items: center;
+}
+.offer_precent_one {
+  font-size: 12px;
+  padding: 1px;
+  font-weight: bold;
+  font-family: "B Nazanin";
+  color: #0d47a1;
+  background-color: #4fc3f7;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+.offer_precent_two {
+  -moz-text-decoration-line: line-through;
+  text-decoration-line: line-through;
+  color: #37474f;
+  font-size: 14px;
+  font-weight: 500;
+}
+.sale {
+  margin-top: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sale p {
+  font-size: small;
+  font-weight: bold;
+}
+.sale p span {
+  font-weight: lighter;
+}
+.sale_last {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2px;
+}
+.sale_last span {
+  color: #37474f;
+  font-size: 12px;
+}
+.sale_icon {
+  width: 15px;
+  height: 15px;
+}
+
+#sale_offer {
+  text-shadow: 2px 2px 1px #7c6f6f;
+  background-color: #212121;
+  color: #eeeaea;
+}
+#sale_offer::before {
+  content: "❌";
+  color: #2b0000;
+}
+.sale_offer {
+  max-width: 80px;
+  position: absolute;
+  top: 10px;
+  left: -8px;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 6px 15px;
+  text-shadow: 2px 2px 1px #f0e9e9;
+  box-shadow: 2px 2px 5px 2px #fff;
+  color: rgb(7, 7, 7);
+  background-color: #26df4b;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  border-radius: 30px;
+  z-index: 100;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.sale_offer::before {
+  content: "✔";
+  color: #bc2020;
+}
+#mycanvas {
+  margin-top: 50px;
+}
+@media all and( max-width:844px) {
+  .container {
+    margin: 32px 5px;
+    background-color: black;
+  }
+}
+.sabad_icon {
+  fill: rgb(43, 203, 31);
+  transition: all 400ms ease-in-out 10ms;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  -webkit-transition: all 400ms ease-in-out 10ms;
+  -moz-transition: all 400ms ease-in-out 10ms;
+  -ms-transition: all 400ms ease-in-out 10ms;
+  -o-transition: all 400ms ease-in-out 10ms;
+}
+.sabad {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+.sabad_icon:hover {
+  fill: #42405e;
+  cursor: pointer;
+}
+
+.title_sabad {
+  font-size: 30px;
+  color: #37474f;
+  font-family: sans-serif;
+}
+.items_kharid {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.items_kharid span {
+  width: 20%;
+  text-align: center;
+}
+.list {
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+}
+.kala_id {
+  width: 20%;
+  
+}
+.scrol{
+  
+  width: 100%;
+  height: 10px;
+  background-color: #cd1919;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.kala_aks {
+  width: 50px;
+  height: 50px;
+  width: 20%;
+}
+.kala_name {
+  width: 20%;
+}
+.kala_cost {
+  width: 20%;
+}
+.kala_t{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kala_number {
+  width: 40%
+}
+.kala_total {
+  width: 20%;
+}
+.ttt{
+  font-size: 30px;
+}
+.btn_purches{
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 0 rgb(141, 137, 137);
+  outline: none;
+  width: 200px;
+  height: 40px;
+  color: #fff;
+  font-size: 20px;
+  background-color: #0d47a1;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.btn_purches:hover{
+  background-color: #4370b4;
+}
